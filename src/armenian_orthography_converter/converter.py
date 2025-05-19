@@ -2,7 +2,7 @@ import json
 import os
 import re
 
-_data_path = os.path.join(os.path.dirname(__file__), '..', 'export.json')
+_data_path = os.path.join(os.path.dirname(__file__), '..', '..', 'export.json')
 with open(_data_path, encoding='utf-8') as f:
     _RAW = json.load(f)
 
