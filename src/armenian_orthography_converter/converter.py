@@ -1,9 +1,8 @@
 import json
-import os
 import re
+import importlib.resources as resources
 
-_data_path = os.path.join(os.path.dirname(__file__), '..', '..', 'export.json')
-with open(_data_path, encoding='utf-8') as f:
+with resources.open_text('armenian_orthography_converter.data', 'export.json', encoding='utf-8') as f:
     _RAW = json.load(f)
 
 def _fix_repl(s):

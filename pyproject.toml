@@ -18,4 +18,7 @@ where = ["src"]
 
 [tool.setuptools]
 package-dir = {"" = "src"}
+[tool.setuptools.package-data]
+"armenian_orthography_converter.data" = ["export.json"]
+
 packages = ["find:"]
