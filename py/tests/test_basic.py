@@ -1,14 +1,17 @@
-import json, re, pathlib
+import json
+import pathlib
 import unittest
+
 from py import converter
 
-def load_js_data(path):
+
+def load_data(path):
     text = pathlib.Path(path).read_text(encoding='utf-8')
-    text = re.sub(r'^module\.exports\s*=\s*', '', text)
-    text = re.sub(r';\s*$', '', text.strip())
     return json.loads(text)
 
-words = load_js_data('test/data/test1.js')[:50]
+
+DATA_PATH = pathlib.Path(__file__).resolve().parent / 'data' / 'test1.json'
+words = load_data(DATA_PATH)[:50]
 
 class TestRoundtrip(unittest.TestCase):
     def test_roundtrip(self):

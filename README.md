@@ -1,43 +1,40 @@
-# Armenian orthography converter
+# Armenian Orthography Converter (Python)
 
-[![Bower](https://img.shields.io/bower/v/armenian-orthography-converter.svg?style=flat-square)](https://github.com/instigatetcf/armenian-orthography-converter/)
-[![License](https://img.shields.io/badge/license-GPLv3-blue.svg?style=flat-square)](https://github.com/instigatetcf/armenian-orthography-converter/blob/master/LICENSE)
+This project converts text between the Soviet orthography and the classical Mashtots orthography of the Armenian language.  All previous JavaScript code has been removed in favour of a pure Python implementation.
 
-## Set up
+## Requirements
 
-Use following command to load node packajes
+- Python 3.8+
 
-    npm install
+## Usage
 
-## Install
-
-    bower install armenian-orthography-converter
-
-## Python usage
-
-This repository now includes a Python implementation.
+### Library
 
 ```python
 from py import converter
 
-modern = "Աղբյուրներ"
-traditional = converter.soviet_to_mashtots(modern)
+text = "Աղբյուրներ"
+print(converter.soviet_to_mashtots(text))
 ```
 
-## Run Python tests
+### Command line
 
-Run the unit tests with:
+A simple command line interface is provided.  Use `--direction` to select the conversion direction.
+
+```bash
+python -m py.cli --direction to_mashtots INPUT.txt OUTPUT.txt
+```
+
+Options:
+- `--direction` – either `to_mashtots` or `to_soviet`.
+- `--show-path` – print each intermediate transformation.
+
+## Running the tests
 
 ```bash
 python -m unittest discover py/tests
 ```
 
-## Grunt tasks
+## License
 
-Use following command to check code quality
-
-    grunt tslit
-
-Use following command to build project (it will create dest/mashtots.min.js file)
-
-    grunt build
+This project is distributed under the terms of the GNU GPL v3.
