@@ -1,4 +1,4 @@
-module.exports = [
+[
 {"modern": "հաբեշ", "traditional": "հաբէշ"},
 {"modern": "հագարացի", "traditional": "հագարացի"},
 {"modern": "հագնելիք", "traditional": "հագնելիք"},
@@ -2451,4 +2451,4 @@ module.exports = [
 {"modern": "որսում", "traditional": "որսում"},
 {"modern": "որքանություն", "traditional": "որքանութիւն"},
 {"modern": "ոք", "traditional": "ոք"}
-];
+]

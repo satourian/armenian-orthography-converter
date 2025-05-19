@@ -1,4 +1,4 @@
-module.exports = [
+[
     {"modern": "Ալեքը", "traditional": "Ալեքը"},
     {"modern": "Ալեքսանդրոպոլ", "traditional": "Ալեքսանդրոպոլ"},
     {"modern": "Աղբյուրներ", "traditional": "Աղբիւրներ"},
@@ -2987,4 +2987,4 @@ module.exports = [
     {"modern": "ֆրենսիս", "traditional": "ֆրենսիս"},
     {"modern": "ֆրիտա", "traditional": "ֆրիտայ"},
     {"modern": "ֆրոսթի", "traditional": "ֆրոսթի"}
-];
+]

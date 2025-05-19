@@ -1,50 +1,40 @@
-# Armenian orthography converter
+# Armenian Orthography Converter (Python)
 
-[![Bower](https://img.shields.io/bower/v/armenian-orthography-converter.svg?style=flat-square)](https://github.com/instigatetcf/armenian-orthography-converter/)
-[![License](https://img.shields.io/badge/license-GPLv3-blue.svg?style=flat-square)](https://github.com/instigatetcf/armenian-orthography-converter/blob/master/LICENSE)
+This project converts text between the Soviet orthography and the classical Mashtots orthography of the Armenian language.  All previous JavaScript code has been removed in favour of a pure Python implementation.
 
-## Set up
+## Requirements
 
-Use following command to load node packajes
+- Python 3.8+
 
-    npm install
+## Usage
 
-## Install
+### Library
 
-    bower install armenian-orthography-converter
+```python
+from py import converter
 
-## Run tests
+text = "Աղբյուրներ"
+print(converter.soviet_to_mashtots(text))
+```
 
-Use following command to run all tests
+### Command line
 
-    node test/index.js
+A simple command line interface is provided.  Use `--direction` to select the conversion direction.
 
-Use following command to run single test
+```bash
+python -m py.cli --direction to_mashtots INPUT.txt OUTPUT.txt
+```
 
-    node test/index.js #
+Options:
+- `--direction` – either `to_mashtots` or `to_soviet`.
+- `--show-path` – print each intermediate transformation.
 
-Where # is number of dictionary. Possible values are 1 - 5.
+## Running the tests
 
-Example:
+```bash
+python -m unittest discover py/tests
+```
 
-    node test/index.js 4
+## License
 
-Use following command to run check none world and see all convert stack.
-
-    node test/word.js type word
-
-Type can be **s** for Soviet orthography and **m** for traditional orthography.
-
-Example:
-
-    node test/word.js s միեւնոյն
-
-## Grunt tasks
-
-Use following command to check code quality
-
-    grunt tslit
-
-Use following command to build project (it will create dest/mashtots.min.js file)
-
-    grunt build
+This project is distributed under the terms of the GNU GPL v3.
