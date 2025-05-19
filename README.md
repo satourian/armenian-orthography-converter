@@ -8,7 +8,14 @@ This project converts text between the Soviet orthography and the classical Mash
 
 ## Installation
 
-Install the package in editable mode:
+Create and activate a virtual environment (recommended):
+
+```bash
+python3 -m venv .venv
+source .venv/bin/activate
+```
+
+Then install the package in editable mode:
 
 ```bash
 pip install -e .
