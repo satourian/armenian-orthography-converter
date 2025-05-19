@@ -10,6 +10,9 @@ authors = [{name = "Njdeh Satourian"}]
 readme = "README.md"
 requires-python = ">=3.8"
 
+[project.scripts]
+aoc = "armenian_orthography_converter.cli:main"
+
 [tool.setuptools.packages.find]
 where = ["src"]
 

@@ -37,7 +37,7 @@ print(converter.soviet_to_mashtots(text))
 A simple command line interface is provided.  Use `--direction` to select the conversion direction.
 
 ```bash
-python -m armenian_orthography_converter.cli --direction to_mashtots INPUT.txt OUTPUT.txt
+aoc --direction to_mashtots INPUT.txt OUTPUT.txt
 ```
 
 Options:
