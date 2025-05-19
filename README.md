@@ -6,12 +6,20 @@ This project converts text between the Soviet orthography and the classical Mash
 
 - Python 3.8+
 
+## Installation
+
+Install the package in editable mode:
+
+```bash
+pip install -e .
+```
+
 ## Usage
 
 ### Library
 
 ```python
-from py import converter
+from armenian_orthography_converter import converter
 
 text = "Աղբյուրներ"
 print(converter.soviet_to_mashtots(text))
@@ -22,7 +30,7 @@ print(converter.soviet_to_mashtots(text))
 A simple command line interface is provided.  Use `--direction` to select the conversion direction.
 
 ```bash
-python -m py.cli --direction to_mashtots INPUT.txt OUTPUT.txt
+python -m armenian_orthography_converter.cli --direction to_mashtots INPUT.txt OUTPUT.txt
 ```
 
 Options:
@@ -32,7 +40,7 @@ Options:
 ## Running the tests
 
 ```bash
-python -m unittest discover py/tests
+python -m unittest discover tests
 ```
 
 ## License

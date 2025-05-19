@@ -1,8 +1,11 @@
 import json
 import pathlib
+import sys
 import unittest
 
-from py import converter
+sys.path.insert(0, str(pathlib.Path(__file__).resolve().parents[1] / "src"))
+
+from armenian_orthography_converter import converter
 
 
 def load_data(path):
