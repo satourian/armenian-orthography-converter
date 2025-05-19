@@ -13,31 +13,24 @@ Use following command to load node packajes
 
     bower install armenian-orthography-converter
 
-## Run tests
+## Python usage
 
-Use following command to run all tests
+This repository now includes a Python implementation.
 
-    node test/index.js
+```python
+from py import converter
 
-Use following command to run single test
+modern = "Աղբյուրներ"
+traditional = converter.soviet_to_mashtots(modern)
+```
 
-    node test/index.js #
+## Run Python tests
 
-Where # is number of dictionary. Possible values are 1 - 5.
+Run the unit tests with:
 
-Example:
-
-    node test/index.js 4
-
-Use following command to run check none world and see all convert stack.
-
-    node test/word.js type word
-
-Type can be **s** for Soviet orthography and **m** for traditional orthography.
-
-Example:
-
-    node test/word.js s միեւնոյն
+```bash
+python -m unittest discover py/tests
+```
 
 ## Grunt tasks
 
